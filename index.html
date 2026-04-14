@@ -1,0 +1,995 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ProFix Handyman Services — Fast, reliable home repairs in the Greater Austin area. Licensed, insured & satisfaction guaranteed. Call now for a free quote!">
+    <meta name="keywords" content="handyman services, home repair, drywall repair, plumbing fixes, handyman Austin, local handyman, free quote">
+    <meta name="robots" content="index, follow">
+    <title>ProFix Handyman Services | Reliable Home Repairs in Austin, TX — Call (555) 847-2391</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: { 50:'#f0f4f8', 100:'#d9e2ec', 200:'#bcccdc', 300:'#9fb3c8', 400:'#829ab1', 500:'#627d98', 600:'#486581', 700:'#334e68', 800:'#243b53', 900:'#102a43' },
+                        brand: { 50:'#fff8ed', 100:'#ffefd4', 200:'#ffdba8', 300:'#ffc170', 400:'#ffa037', 500:'#f58520', 600:'#e06a0e', 700:'#b9500c', 800:'#934010', 900:'#783610' },
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                }
+            }
+        }
+    </script>
+
+    <style>
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Inter', sans-serif; }
+        .hero-gradient {
+            background: linear-gradient(135deg, #102a43 0%, #243b53 40%, #334e68 100%);
+        }
+        .cta-gradient {
+            background: linear-gradient(135deg, #f58520 0%, #e06a0e 50%, #b9500c 100%);
+        }
+        .trust-badge {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255,255,255,0.15);
+        }
+        .service-card:hover .service-icon {
+            background: #f58520;
+            color: white;
+            transform: scale(1.1);
+        }
+        .service-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px rgba(16,42,67,0.12);
+        }
+        .service-card { transition: all 0.3s ease; }
+        .service-icon { transition: all 0.3s ease; }
+        .step-line::after {
+            content: '';
+            position: absolute;
+            top: 2rem;
+            left: calc(50% + 2rem);
+            width: calc(100% - 4rem);
+            height: 2px;
+            background: linear-gradient(90deg, #f58520, #ffc170);
+            z-index: 0;
+        }
+        @media (max-width: 767px) {
+            .step-line::after { display: none; }
+        }
+        .testimonial-card {
+            transition: all 0.3s ease;
+        }
+        .testimonial-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 32px rgba(16,42,67,0.1);
+        }
+        .float-cta {
+            animation: pulse-glow 2s ease-in-out infinite;
+        }
+        @keyframes pulse-glow {
+            0%, 100% { box-shadow: 0 4px 20px rgba(245,133,32,0.4); }
+            50% { box-shadow: 0 4px 30px rgba(245,133,32,0.7); }
+        }
+        .star { color: #f58520; }
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: #f58520;
+            box-shadow: 0 0 0 3px rgba(245,133,32,0.15);
+        }
+        .nav-scrolled {
+            background: rgba(255,255,255,0.97) !important;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+        }
+        .nav-scrolled .nav-link { color: #334e68 !important; }
+        .nav-scrolled .nav-logo { color: #102a43 !important; }
+        .nav-scrolled .nav-phone { color: #f58520 !important; }
+        .check-icon::before {
+            content: '';
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            background: #f58520;
+            border-radius: 50%;
+            margin-right: 10px;
+            flex-shrink: 0;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white' width='14' height='14'%3E%3Cpath d='M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    </style>
+</head>
+<body class="bg-white text-navy-800 antialiased">
+
+    <!-- ========== TOP BAR ========== -->
+    <div class="bg-navy-900 text-white text-sm py-2 px-4">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-1">
+            <div class="flex items-center gap-4">
+                <span class="flex items-center gap-1.5">
+                    <span class="iconify" data-icon="lucide:clock" data-width="14"></span>
+                    Mon–Sat: 7AM – 7PM
+                </span>
+                <span class="hidden sm:flex items-center gap-1.5">
+                    <span class="iconify" data-icon="lucide:map-pin" data-width="14"></span>
+                    Serving Greater Austin, TX
+                </span>
+            </div>
+            <a href="tel:5558472391" class="flex items-center gap-1.5 font-semibold text-brand-400 hover:text-brand-300 transition-colors">
+                <span class="iconify" data-icon="lucide:phone" data-width="14"></span>
+                (555) 847-2391
+            </a>
+        </div>
+    </div>
+
+    <!-- ========== NAVIGATION ========== -->
+    <nav id="navbar" class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-navy-100 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex justify-between items-center">
+            <a href="#" class="flex items-center gap-2 nav-logo text-navy-900 font-bold text-xl transition-colors">
+                <div class="w-10 h-10 cta-gradient rounded-lg flex items-center justify-center">
+                    <span class="iconify text-white" data-icon="lucide:wrench" data-width="22"></span>
+                </div>
+                ProFix
+            </a>
+            <div class="hidden lg:flex items-center gap-8">
+                <a href="#services" class="nav-link text-navy-700 hover:text-brand-500 font-medium transition-colors text-sm">Services</a>
+                <a href="#why-us" class="nav-link text-navy-700 hover:text-brand-500 font-medium transition-colors text-sm">Why Us</a>
+                <a href="#how-it-works" class="nav-link text-navy-700 hover:text-brand-500 font-medium transition-colors text-sm">How It Works</a>
+                <a href="#reviews" class="nav-link text-navy-700 hover:text-brand-500 font-medium transition-colors text-sm">Reviews</a>
+                <a href="#contact" class="nav-link text-navy-700 hover:text-brand-500 font-medium transition-colors text-sm">Contact</a>
+            </div>
+            <div class="flex items-center gap-3">
+                <a href="tel:5558472391" class="nav-phone hidden sm:flex items-center gap-2 text-brand-600 font-bold text-sm hover:text-brand-700 transition-colors">
+                    <span class="iconify" data-icon="lucide:phone-call" data-width="16"></span>
+                    (555) 847-2391
+                </a>
+                <a href="#contact" class="cta-gradient text-white font-semibold text-sm px-5 py-2.5 rounded-lg hover:opacity-90 transition-opacity shadow-md">
+                    Free Quote
+                </a>
+                <button id="mobile-menu-btn" class="lg:hidden p-2 text-navy-700" aria-label="Open menu">
+                    <span class="iconify" data-icon="lucide:menu" data-width="24"></span>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-navy-100 px-4 pb-4">
+            <a href="#services" class="block py-3 text-navy-700 font-medium border-b border-navy-50">Services</a>
+            <a href="#why-us" class="block py-3 text-navy-700 font-medium border-b border-navy-50">Why Us</a>
+            <a href="#how-it-works" class="block py-3 text-navy-700 font-medium border-b border-navy-50">How It Works</a>
+            <a href="#reviews" class="block py-3 text-navy-700 font-medium border-b border-navy-50">Reviews</a>
+            <a href="#contact" class="block py-3 text-navy-700 font-medium border-b border-navy-50">Contact</a>
+            <a href="tel:5558472391" class="flex items-center gap-2 py-3 text-brand-600 font-bold">
+                <span class="iconify" data-icon="lucide:phone-call" data-width="18"></span>
+                (555) 847-2391
+            </a>
+        </div>
+    </nav>
+
+    <!-- ========== HERO SECTION ========== -->
+    <section class="hero-gradient relative overflow-hidden">
+        <!-- Background pattern -->
+        <div class="absolute inset-0 opacity-5" style="background-image: url('data:image/svg+xml,%3Csvg width=&quot;60&quot; height=&quot;60&quot; viewBox=&quot;0 0 60 60&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Cg fill=&quot;none&quot; fill-rule=&quot;evenodd&quot;%3E%3Cg fill=&quot;%23ffffff&quot; fill-opacity=&quot;1&quot;%3E%3Cpath d=&quot;M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z&quot;/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center py-16 md:py-20 lg:py-24">
+                <!-- Left: Copy -->
+                <div class="text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 trust-badge rounded-full px-4 py-2 mb-6">
+                        <span class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
+                        <span class="text-white/80 text-sm font-medium">Same-Day Service Available</span>
+                    </div>
+
+                    <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl text-white leading-tight tracking-tight mb-6">
+                        Your Home Deserves a
+                        <span class="text-brand-400">Handyman</span>
+                        You Can Trust
+                    </h1>
+
+                    <p class="text-navy-200 text-lg sm:text-xl leading-relaxed mb-8 max-w-xl mx-auto lg:mx-0">
+                        No more waiting weeks for a callback. No surprise charges. Just honest, skilled repairs — done right the first time, every time.
+                    </p>
+
+                    <!-- CTAs -->
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-10">
+                        <a href="tel:5558472391" class="inline-flex items-center justify-center gap-2.5 cta-gradient text-white font-bold text-lg px-8 py-4 rounded-xl hover:opacity-90 transition-all shadow-lg shadow-brand-500/30">
+                            <span class="iconify" data-icon="lucide:phone-call" data-width="22"></span>
+                            Call (555) 847-2391
+                        </a>
+                        <a href="#contact" class="inline-flex items-center justify-center gap-2.5 bg-white/10 backdrop-blur border border-white/20 text-white font-semibold text-lg px-8 py-4 rounded-xl hover:bg-white/20 transition-all">
+                            <span class="iconify" data-icon="lucide:file-text" data-width="20"></span>
+                            Get a Free Quote
+                        </a>
+                    </div>
+
+                    <!-- Trust Badges Row -->
+                    <div class="grid grid-cols-3 gap-4 max-w-md mx-auto lg:mx-0">
+                        <div class="text-center lg:text-left">
+                            <div class="text-3xl font-extrabold text-white">12+</div>
+                            <div class="text-navy-300 text-xs sm:text-sm">Years Experience</div>
+                        </div>
+                        <div class="text-center lg:text-left">
+                            <div class="text-3xl font-extrabold text-white">5,000+</div>
+                            <div class="text-navy-300 text-xs sm:text-sm">Jobs Completed</div>
+                        </div>
+                        <div class="text-center lg:text-left">
+                            <div class="text-3xl font-extrabold text-white">4.9★</div>
+                            <div class="text-navy-300 text-xs sm:text-sm">Avg. Rating</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Truck Image -->
+                <div class="relative">
+                    <div class="relative rounded-2xl overflow-hidden shadow-2xl shadow-black/30">
+                        <img
+                            src="https://picsum.photos/seed/handyman-truck-work/800/560.jpg"
+                            alt="ProFix Handyman Services branded work truck parked at a residential home in Austin Texas"
+                            class="w-full h-[320px] sm:h-[400px] lg:h-[480px] object-cover"
+                            loading="eager"
+                        >
+                        <div class="absolute inset-0 bg-gradient-to-t from-navy-900/60 via-transparent to-transparent"></div>
+                        <!-- Floating badge on image -->
+                        <div class="absolute bottom-4 left-4 right-4 trust-badge rounded-xl px-5 py-3 flex items-center gap-3">
+                            <div class="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0">
+                                <span class="iconify text-white" data-icon="lucide:shield-check" data-width="20"></span>
+                            </div>
+                            <div>
+                                <div class="text-white font-semibold text-sm">Licensed & Fully Insured</div>
+                                <div class="text-navy-200 text-xs">Your property is always protected</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Decorative element -->
+                    <div class="absolute -top-4 -right-4 w-24 h-24 bg-brand-500/20 rounded-full blur-2xl"></div>
+                    <div class="absolute -bottom-4 -left-4 w-32 h-32 bg-brand-500/10 rounded-full blur-3xl"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== SERVICES SECTION ========== -->
+    <section id="services" class="py-16 md:py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+            <div class="text-center max-w-2xl mx-auto mb-12 md:mb-16">
+                <span class="inline-block text-brand-600 font-semibold text-sm uppercase tracking-wider mb-3">What We Do</span>
+                <h2 class="font-serif text-3xl sm:text-4xl text-navy-900 tracking-tight mb-4">
+                    One Call Fixes It All
+                </h2>
+                <p class="text-navy-600 text-lg leading-relaxed">
+                    From a leaky faucet to a full room refresh — we handle the jobs other contractors won't touch.
+                </p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Service 1 -->
+                <div class="service-card bg-navy-50/50 border border-navy-100 rounded-xl p-6 cursor-default">
+                    <div class="service-icon w-14 h-14 bg-brand-50 text-brand-600 rounded-xl flex items-center justify-center mb-5">
+                        <span class="iconify" data-icon="lucide:droplets" data-width="26"></span>
+                    </div>
+                    <h3 class="text-navy-900 font-bold text-lg mb-2">Plumbing Fixes</h3>
+                    <p class="text-navy-600 text-sm leading-relaxed">Leaky faucets, running toilets, drain clogs, garbage disposal repairs, and minor pipe fixes.</p>
+                </div>
+                <!-- Service 2 -->
+                <div class="service-card bg-navy-50/50 border border-navy-100 rounded-xl p-6 cursor-default">
+                    <div class="service-icon w-14 h-14 bg-brand-50 text-brand-600 rounded-xl flex items-center justify-center mb-5">
+                        <span class="iconify" data-icon="lucide:zap" data-width="26"></span>
+                    </div>
+                    <h3 class="text-navy-900 font-bold text-lg mb-2">Electrical Work</h3>
+                    <p class="text-navy-600 text-sm leading-relaxed">Outlet installation, light fixture swaps, ceiling fan mounting, switch replacement, and troubleshooting.</p>
+                </div>
+                <!-- Service 3 -->
+                <div class="service-card bg-navy-50/50 border border-navy-100 rounded-xl p-6 cursor-default">
+                    <div class="service-icon w-14 h-14 bg-brand-50 text-brand-600 rounded-xl flex items-center justify-center mb-5">
+                        <span class="iconify" data-icon="lucide:paintbrush" data-width="26"></span>
+                    </div>
+                    <h3 class="text-navy-900 font-bold text-lg mb-2">Painting & Drywall</h3>
+                    <p class="text-navy-600 text-sm leading-relaxed">Interior painting, drywall patching, hole repair, texture matching, and touch-ups that blend seamlessly.</p>
+                </div>
+                <!-- Service 4 -->
+                <div class="service-card bg-navy-50/50 border border-navy-100 rounded-xl p-6 cursor-default">
+                    <div class="service-icon w-14 h-14 bg-brand-50 text-brand-600 rounded-xl flex items-center justify-center mb-5">
+                        <span class="iconify" data-icon="lucide:hammer" data-width="26"></span>
+                    </div>
+                    <h3 class="text-navy-900 font-bold text-lg mb-2">Carpentry</h3>
+                    <p class="text-navy-600 text-sm leading-relaxed">Shelving, trim work, deck repair, fence fixes, custom builds, and door/window framing.</p>
+                </div>
+                <!-- Service 5 -->
+                <div class="service-card bg-navy-50/50 border border-navy-100 rounded-xl p-6 cursor-default">
+                    <div class="service-icon w-14 h-14 bg-brand-50 text-brand-600 rounded-xl flex items-center justify-center mb-5">
+                        <span class="iconify" data-icon="lucide:door-open" data-width="26"></span>
+                    </div>
+                    <h3 class="text-navy-900 font-bold text-lg mb-2">Doors & Windows</h3>
+                    <p class="text-navy-600 text-sm leading-relaxed">Sticky door repair, weatherstripping, screen replacement, lock changes, and window caulking.</p>
+                </div>
+                <!-- Service 6 -->
+                <div class="service-card bg-navy-50/50 border border-navy-100 rounded-xl p-6 cursor-default">
+                    <div class="service-icon w-14 h-14 bg-brand-50 text-brand-600 rounded-xl flex items-center justify-center mb-5">
+                        <span class="iconify" data-icon="lucide:sofa" data-width="26"></span>
+                    </div>
+                    <h3 class="text-navy-900 font-bold text-lg mb-2">Furniture Assembly</h3>
+                    <p class="text-navy-600 text-sm leading-relaxed">IKEA, Wayfair, Walmart — we assemble it all. Fast, correct, and we clean up every piece of packaging.</p>
+                </div>
+                <!-- Service 7 -->
+                <div class="service-card bg-navy-50/50 border border-navy-100 rounded-xl p-6 cursor-default">
+                    <div class="service-icon w-14 h-14 bg-brand-50 text-brand-600 rounded-xl flex items-center justify-center mb-5">
+                        <span class="iconify" data-icon="lucide:trees" data-width="26"></span>
+                    </div>
+                    <h3 class="text-navy-900 font-bold text-lg mb-2">Deck & Fence</h3>
+                    <p class="text-navy-600 text-sm leading-relaxed">Board replacement, staining, sealing, railing repair, and structural reinforcement for outdoor spaces.</p>
+                </div>
+                <!-- Service 8 -->
+                <div class="service-card bg-navy-50/50 border border-navy-100 rounded-xl p-6 cursor-default">
+                    <div class="service-icon w-14 h-14 bg-brand-50 text-brand-600 rounded-xl flex items-center justify-center mb-5">
+                        <span class="iconify" data-icon="lucide:package" data-width="26"></span>
+                    </div>
+                    <h3 class="text-navy-900 font-bold text-lg mb-2">General Maintenance</h3>
+                    <p class="text-navy-600 text-sm leading-relaxed">TV mounting, gutter cleaning, pressure washing, grab bar installation, and seasonal home checkups.</p>
+                </div>
+            </div>
+
+            <div class="text-center mt-10">
+                <p class="text-navy-500 mb-4">Don't see your project listed? We probably still do it.</p>
+                <a href="#contact" class="inline-flex items-center gap-2 text-brand-600 font-semibold hover:text-brand-700 transition-colors">
+                    Ask About Your Project
+                    <span class="iconify" data-icon="lucide:arrow-right" data-width="18"></span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== WHY CHOOSE US ========== -->
+    <section id="why-us" class="py-16 md:py-20 bg-navy-50/70">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+            <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+                <!-- Left: Image -->
+                <div class="relative">
+                    <div class="rounded-2xl overflow-hidden shadow-xl">
+                        <img
+                            src="https://picsum.photos/seed/handyman-professional-work/700/500.jpg"
+                            alt="Professional handyman carefully repairing a door frame in a clean home environment"
+                            class="w-full h-[350px] sm:h-[420px] object-cover"
+                            loading="lazy"
+                        >
+                    </div>
+                    <!-- Floating stat card -->
+                    <div class="absolute -bottom-6 -right-4 sm:right-4 bg-white rounded-xl shadow-lg p-5 border border-navy-100">
+                        <div class="flex items-center gap-3">
+                            <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
+                                <span class="iconify text-green-600" data-icon="lucide:thumbs-up" data-width="24"></span>
+                            </div>
+                            <div>
+                                <div class="text-2xl font-extrabold text-navy-900">98%</div>
+                                <div class="text-navy-500 text-sm">Satisfaction Rate</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Content -->
+                <div>
+                    <span class="inline-block text-brand-600 font-semibold text-sm uppercase tracking-wider mb-3">Why Homeowners Choose Us</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl text-navy-900 tracking-tight mb-6">
+                        We Show Up. We Do Great Work. We Respect Your Home.
+                    </h2>
+                    <p class="text-navy-600 text-lg leading-relaxed mb-8">
+                        You've probably heard the horror stories — contractors who don't call back, leave a mess, or hand you a bill twice what they quoted. That's not us. Here's our promise:
+                    </p>
+
+                    <div class="space-y-5">
+                        <div class="flex items-start gap-3">
+                            <div class="w-6 h-6 bg-brand-500 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <span class="iconify text-white" data-icon="lucide:check" data-width="14"></span>
+                            </div>
+                            <div>
+                                <div class="text-navy-900 font-semibold mb-1">Upfront Pricing — No Surprises</div>
+                                <div class="text-navy-600 text-sm leading-relaxed">We give you a clear price before we start. If the job changes, we talk to you first. Period.</div>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="w-6 h-6 bg-brand-500 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <span class="iconify text-white" data-icon="lucide:check" data-width="14"></span>
+                            </div>
+                            <div>
+                                <div class="text-navy-900 font-semibold mb-1">1-Hour Response Window</div>
+                                <div class="text-navy-600 text-sm leading-relaxed">When you call, we answer. When we schedule, we show up. No more taking a day off for a "maybe."</div>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="w-6 h-6 bg-brand-500 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <span class="iconify text-white" data-icon="lucide:check" data-width="14"></span>
+                            </div>
+                            <div>
+                                <div class="text-navy-900 font-semibold mb-1">Clean Worksite Guarantee</div>
+                                <div class="text-navy-600 text-sm leading-relaxed">We treat your home like it's our own. Shoes off, drop cloths down, and every scrap cleaned up before we leave.</div>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="w-6 h-6 bg-brand-500 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <span class="iconify text-white" data-icon="lucide:check" data-width="14"></span>
+                            </div>
+                            <div>
+                                <div class="text-navy-900 font-semibold mb-1">100% Satisfaction Guarantee</div>
+                                <div class="text-navy-600 text-sm leading-relaxed">If you're not happy, we come back and make it right — at no extra cost to you.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== HOW IT WORKS ========== -->
+    <section id="how-it-works" class="py-16 md:py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+            <div class="text-center max-w-2xl mx-auto mb-12 md:mb-16">
+                <span class="inline-block text-brand-600 font-semibold text-sm uppercase tracking-wider mb-3">Simple Process</span>
+                <h2 class="font-serif text-3xl sm:text-4xl text-navy-900 tracking-tight mb-4">
+                    From Call to Done in 3 Easy Steps
+                </h2>
+                <p class="text-navy-600 text-lg leading-relaxed">
+                    No complicated forms. No runaround. Just a straightforward process that respects your time.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 md:gap-6 relative">
+                <!-- Step 1 -->
+                <div class="step-line relative text-center">
+                    <div class="relative z-10 w-16 h-16 cta-gradient rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg shadow-brand-500/25">
+                        <span class="text-white font-extrabold text-xl">1</span>
+                    </div>
+                    <h3 class="text-navy-900 font-bold text-xl mb-3">Call or Request a Quote</h3>
+                    <p class="text-navy-600 leading-relaxed max-w-xs mx-auto">
+                        Tell us what you need. We'll ask a few quick questions and give you a price estimate — often right over the phone.
+                    </p>
+                </div>
+                <!-- Step 2 -->
+                <div class="step-line relative text-center">
+                    <div class="relative z-10 w-16 h-16 cta-gradient rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg shadow-brand-500/25">
+                        <span class="text-white font-extrabold text-xl">2</span>
+                    </div>
+                    <h3 class="text-navy-900 font-bold text-xl mb-3">We Show Up On Time</h3>
+                    <p class="text-navy-600 leading-relaxed max-w-xs mx-auto">
+                        We arrive within our scheduled window, fully equipped and ready to work. Same-day service available for urgent needs.
+                    </p>
+                </div>
+                <!-- Step 3 -->
+                <div class="relative text-center">
+                    <div class="relative z-10 w-16 h-16 cta-gradient rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg shadow-brand-500/25">
+                        <span class="text-white font-extrabold text-xl">3</span>
+                    </div>
+                    <h3 class="text-navy-900 font-bold text-xl mb-3">Job Done Right — Guaranteed</h3>
+                    <p class="text-navy-600 leading-relaxed max-w-xs mx-auto">
+                        We complete the work to your standards, clean up completely, and you only pay when you're 100% satisfied.
+                    </p>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <a href="#contact" class="inline-flex items-center justify-center gap-2.5 cta-gradient text-white font-bold text-lg px-8 py-4 rounded-xl hover:opacity-90 transition-all shadow-lg shadow-brand-500/25">
+                    <span class="iconify" data-icon="lucide:phone-call" data-width="20"></span>
+                    Get Started — It's Free
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== TESTIMONIALS ========== -->
+    <section id="reviews" class="py-16 md:py-20 bg-navy-50/70">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+            <div class="text-center max-w-2xl mx-auto mb-12 md:mb-16">
+                <span class="inline-block text-brand-600 font-semibold text-sm uppercase tracking-wider mb-3">Real Reviews</span>
+                <h2 class="font-serif text-3xl sm:text-4xl text-navy-900 tracking-tight mb-4">
+                    Hear From Our Happy Homeowners
+                </h2>
+                <p class="text-navy-600 text-lg leading-relaxed">
+                    We don't buy reviews. These are from real people in the Austin area who trusted us with their homes.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card bg-white rounded-xl p-6 border border-navy-100 shadow-sm">
+                    <div class="flex gap-1 mb-4">
+                        <span class="star iconify" data-icon="lucide:star" data-width="18"></span>
+                        <span class="star iconify" data-icon="lucide:star" data-width="18"></span>
+                        <span class="star iconify" data-icon="lucide:star" data-width="18"></span>
+                        <span class="star iconify" data-icon="lucide:star" data-width="18"></span>
+                        <span class="star iconify" data-icon="lucide:star" data-width="18"></span>
+                    </div>
+                    <p class="text-navy-700 leading-relaxed mb-6">
+                        "I had a leaky faucet and a cracked tile in my bathroom that had been bugging me for months. Called ProFix on a Tuesday, they came out Wednesday morning, and both issues were fixed before noon. <strong>Incredible turnaround.</strong>"
+                    </p>
+                    <div class="flex items-center gap-3 pt-4 border-t border-navy-100">
+                        <div class="w-10 h-10 bg-navy-200 rounded-full flex items-center justify-center text-navy-600 font-bold text-sm">SM</div>
+                        <div>
+                            <div class="text-navy-900 font-semibold text-sm">Sarah M.</div>
+                            <div class="text-navy-400 text-xs">Round Rock, TX</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card bg-white rounded-xl p-6 border border-navy-100 shadow-sm">
+                    <div class="flex gap-1 mb-4">
+                        <span class="star iconify" data-icon="lucide:star" data-width="18"></span>
+                        <span class="star iconify" data-icon="lucide:star" data-width="18"></span>
+                        <span class="star iconify" data-icon="lucide:star" data-width="18"></span>
+                        <span class="star iconify" data-icon="lucide:star" data-width="18"></span>
+                        <span class="star iconify" data-icon="lucide:star" data-width="18"></span>
+                    </div>
+                    <p class="text-navy-700 leading-relaxed mb-6">
+                        "What I appreciated most was the <strong>upfront pricing</strong>. Mike told me exactly what it would cost before he started — and that's what I paid. No 'oh, this part costs extra' nonsense. Already booked them for a deck repair next month."
+                    </p>
+                    <div class="flex items-center gap-3 pt-4 border-t border-navy-100">
+                        <div class="w-10 h-10 bg-navy-200 rounded-full flex items-center justify-center text-navy-600 font-bold text-sm">DJ</div>
+                        <div>
+                            <div class="text-navy-900 font-semibold text-sm">David J.</div>
+                            <div class="text-navy-400 text-xs">Cedar Park, TX</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card bg-white rounded-xl p-6 border border-navy-100 shadow-sm">
+                    <div class="flex gap-1 mb-4">
+                        <span class="star iconify" data-icon="lucide:star" data-width="18"></span>
+                        <span class="star iconify" data-icon="lucide:star" data-width="18"></span>
+                        <span class="star iconify" data-icon="lucide:star" data-width="18"></span>
+                        <span class="star iconify" data-icon="lucide:star" data-width="18"></span>
+                        <span class="star iconify" data-icon="lucide:star" data-width="18"></span>
+                    </div>
+                    <p class="text-navy-700 leading-relaxed mb-6">
+                        "As a single mom, I'm cautious about who I let in my home. The ProFix team was <strong>professional, polite, and thorough</strong>. They even fixed a loose cabinet hinge I didn't mention — just because they noticed it. That kind of care is rare."
+                    </p>
+                    <div class="flex items-center gap-3 pt-4 border-t border-navy-100">
+                        <div class="w-10 h-10 bg-navy-200 rounded-full flex items-center justify-center text-navy-600 font-bold text-sm">LR</div>
+                        <div>
+                            <div class="text-navy-900 font-semibold text-sm">Lisa R.</div>
+                            <div class="text-navy-400 text-xs">Pflugerville, TX</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Extra trust line -->
+            <div class="mt-10 text-center">
+                <div class="inline-flex items-center gap-3 bg-white rounded-full px-6 py-3 border border-navy-100 shadow-sm">
+                    <div class="flex -space-x-2">
+                        <div class="w-8 h-8 bg-brand-400 rounded-full border-2 border-white flex items-center justify-center text-white text-xs font-bold">SM</div>
+                        <div class="w-8 h-8 bg-navy-400 rounded-full border-2 border-white flex items-center justify-center text-white text-xs font-bold">DJ</div>
+                        <div class="w-8 h-8 bg-brand-600 rounded-full border-2 border-white flex items-center justify-center text-white text-xs font-bold">LR</div>
+                    </div>
+                    <span class="text-navy-700 text-sm font-medium">Trusted by <strong>5,000+ homeowners</strong> across Greater Austin</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== SERVICE AREA ========== -->
+    <section class="py-16 md:py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <!-- Left: Content -->
+                <div>
+                    <span class="inline-block text-brand-600 font-semibold text-sm uppercase tracking-wider mb-3">Service Area</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl text-navy-900 tracking-tight mb-6">
+                        Proudly Serving the Greater Austin Area
+                    </h2>
+                    <p class="text-navy-600 text-lg leading-relaxed mb-8">
+                        Whether you're in the city or the suburbs, our fully-stocked trucks reach you fast. No job too small, no drive too far.
+                    </p>
+
+                    <div class="grid grid-cols-2 gap-3 mb-8">
+                        <div class="flex items-center gap-2.5 text-navy-700">
+                            <span class="iconify text-brand-500" data-icon="lucide:map-pin" data-width="16"></span>
+                            <span class="text-sm font-medium">Austin (All Areas)</span>
+                        </div>
+                        <div class="flex items-center gap-2.5 text-navy-700">
+                            <span class="iconify text-brand-500" data-icon="lucide:map-pin" data-width="16"></span>
+                            <span class="text-sm font-medium">Round Rock</span>
+                        </div>
+                        <div class="flex items-center gap-2.5 text-navy-700">
+                            <span class="iconify text-brand-500" data-icon="lucide:map-pin" data-width="16"></span>
+                            <span class="text-sm font-medium">Cedar Park</span>
+                        </div>
+                        <div class="flex items-center gap-2.5 text-navy-700">
+                            <span class="iconify text-brand-500" data-icon="lucide:map-pin" data-width="16"></span>
+                            <span class="text-sm font-medium">Leander</span>
+                        </div>
+                        <div class="flex items-center gap-2.5 text-navy-700">
+                            <span class="iconify text-brand-500" data-icon="lucide:map-pin" data-width="16"></span>
+                            <span class="text-sm font-medium">Pflugerville</span>
+                        </div>
+                        <div class="flex items-center gap-2.5 text-navy-700">
+                            <span class="iconify text-brand-500" data-icon="lucide:map-pin" data-width="16"></span>
+                            <span class="text-sm font-medium">Georgetown</span>
+                        </div>
+                        <div class="flex items-center gap-2.5 text-navy-700">
+                            <span class="iconify text-brand-500" data-icon="lucide:map-pin" data-width="16"></span>
+                            <span class="text-sm font-medium">Buda & Kyle</span>
+                        </div>
+                        <div class="flex items-center gap-2.5 text-navy-700">
+                            <span class="iconify text-brand-500" data-icon="lucide:map-pin" data-width="16"></span>
+                            <span class="text-sm font-medium">Lakeway</span>
+                        </div>
+                    </div>
+
+                    <p class="text-navy-500 text-sm">
+                        <strong class="text-navy-700">Not sure if we cover your area?</strong> Give us a call — we'll let you know in seconds.
+                    </p>
+                </div>
+
+                <!-- Right: Image -->
+                <div class="rounded-2xl overflow-hidden shadow-xl">
+                    <img
+                        src="https://picsum.photos/seed/austin-suburb-homes/700/500.jpg"
+                        alt="Beautiful suburban neighborhood in the Greater Austin Texas area with well-maintained homes"
+                        class="w-full h-[350px] sm:h-[420px] object-cover"
+                        loading="lazy"
+                    >
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== STRONG CTA SECTION ========== -->
+    <section class="py-16 md:py-20 hero-gradient relative overflow-hidden">
+        <div class="absolute inset-0 opacity-5" style="background-image: url('data:image/svg+xml,%3Csvg width=&quot;60&quot; height=&quot;60&quot; viewBox=&quot;0 0 60 60&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Cg fill=&quot;none&quot; fill-rule=&quot;evenodd&quot;%3E%3Cg fill=&quot;%23ffffff&quot; fill-opacity=&quot;1&quot;%3E%3Cpath d=&quot;M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z&quot;/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center relative z-10">
+            <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl text-white tracking-tight mb-6">
+                That Repair Won't Fix Itself.
+            </h2>
+            <p class="text-navy-200 text-lg sm:text-xl leading-relaxed max-w-2xl mx-auto mb-10">
+                Every day you wait is another day of inconvenience — and sometimes, a small problem becomes a costly one. Let's take care of it today.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="tel:5558472391" class="inline-flex items-center justify-center gap-2.5 cta-gradient text-white font-bold text-lg px-10 py-5 rounded-xl hover:opacity-90 transition-all shadow-xl shadow-brand-500/30">
+                    <span class="iconify" data-icon="lucide:phone-call" data-width="22"></span>
+                    Call Now — (555) 847-2391
+                </a>
+                <a href="#contact" class="inline-flex items-center justify-center gap-2.5 bg-white/10 backdrop-blur border border-white/20 text-white font-semibold text-lg px-10 py-5 rounded-xl hover:bg-white/20 transition-all">
+                    <span class="iconify" data-icon="lucide:file-text" data-width="20"></span>
+                    Request a Free Quote
+                </a>
+            </div>
+            <p class="text-navy-300 text-sm mt-6">
+                <span class="iconify inline-block align-middle mr-1" data-icon="lucide:shield-check" data-width="14"></span>
+                Free estimates • No obligation • Response within 1 hour
+            </p>
+        </div>
+    </section>
+
+    <!-- ========== CONTACT FORM ========== -->
+    <section id="contact" class="py-16 md:py-20 bg-navy-50/70">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+            <div class="grid lg:grid-cols-2 gap-12 lg:gap-16">
+                <!-- Left: Info -->
+                <div>
+                    <span class="inline-block text-brand-600 font-semibold text-sm uppercase tracking-wider mb-3">Get In Touch</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl text-navy-900 tracking-tight mb-6">
+                        Your Free Quote Is Just a Minute Away
+                    </h2>
+                    <p class="text-navy-600 text-lg leading-relaxed mb-10">
+                        Fill out the form and we'll get back to you within the hour with a clear, no-obligation price estimate. Or skip the form and call us directly.
+                    </p>
+
+                    <div class="space-y-6">
+                        <a href="tel:5558472391" class="flex items-center gap-4 group">
+                            <div class="w-14 h-14 bg-brand-50 text-brand-600 rounded-xl flex items-center justify-center group-hover:bg-brand-500 group-hover:text-white transition-all">
+                                <span class="iconify" data-icon="lucide:phone" data-width="24"></span>
+                            </div>
+                            <div>
+                                <div class="text-navy-400 text-sm font-medium">Call Us Anytime</div>
+                                <div class="text-navy-900 font-bold text-xl group-hover:text-brand-600 transition-colors">(555) 847-2391</div>
+                            </div>
+                        </a>
+                        <div class="flex items-center gap-4">
+                            <div class="w-14 h-14 bg-brand-50 text-brand-600 rounded-xl flex items-center justify-center">
+                                <span class="iconify" data-icon="lucide:mail" data-width="24"></span>
+                            </div>
+                            <div>
+                                <div class="text-navy-400 text-sm font-medium">Email Us</div>
+                                <div class="text-navy-900 font-bold text-lg">info@profixhandyman.com</div>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div class="w-14 h-14 bg-brand-50 text-brand-600 rounded-xl flex items-center justify-center">
+                                <span class="iconify" data-icon="lucide:clock" data-width="24"></span>
+                            </div>
+                            <div>
+                                <div class="text-navy-400 text-sm font-medium">Business Hours</div>
+                                <div class="text-navy-900 font-bold text-lg">Mon–Sat: 7AM – 7PM</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Form -->
+                <div>
+                    <form id="quote-form" class="bg-white rounded-2xl p-6 sm:p-8 shadow-xl border border-navy-100">
+                        <h3 class="text-navy-900 font-bold text-xl mb-6">Request Your Free Quote</h3>
+
+                        <div class="space-y-5">
+                            <div>
+                                <label for="name" class="block text-navy-700 text-sm font-semibold mb-2">Your Name *</label>
+                                <input
+                                    type="text"
+                                    id="name"
+                                    name="name"
+                                    required
+                                    placeholder="e.g. John Smith"
+                                    class="w-full px-4 py-3.5 rounded-xl border border-navy-200 bg-navy-50/50 text-navy-900 placeholder-navy-400 text-sm transition-all"
+                                >
+                            </div>
+                            <div>
+                                <label for="phone" class="block text-navy-700 text-sm font-semibold mb-2">Phone Number *</label>
+                                <input
+                                    type="tel"
+                                    id="phone"
+                                    name="phone"
+                                    required
+                                    placeholder="(555) 000-0000"
+                                    class="w-full px-4 py-3.5 rounded-xl border border-navy-200 bg-navy-50/50 text-navy-900 placeholder-navy-400 text-sm transition-all"
+                                >
+                            </div>
+                            <div>
+                                <label for="email" class="block text-navy-700 text-sm font-semibold mb-2">Email Address</label>
+                                <input
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                    placeholder="john@example.com (optional)"
+                                    class="w-full px-4 py-3.5 rounded-xl border border-navy-200 bg-navy-50/50 text-navy-900 placeholder-navy-400 text-sm transition-all"
+                                >
+                            </div>
+                            <div>
+                                <label for="service" class="block text-navy-700 text-sm font-semibold mb-2">Service Needed *</label>
+                                <select
+                                    id="service"
+                                    name="service"
+                                    required
+                                    class="w-full px-4 py-3.5 rounded-xl border border-navy-200 bg-navy-50/50 text-navy-900 text-sm transition-all appearance-none"
+                                    style="background-image: url('data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%2724%27 height=%2724%27 viewBox=%270 0 24 24%27 fill=%27none%27 stroke=%27%23627d98%27 stroke-width=%272%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27%3E%3Cpolyline points=%276 9 12 15 18 9%27%3E%3C/polyline%3E%3C/svg%3E'); background-repeat: no-repeat; background-position: right 12px center; background-size: 18px;"
+                                >
+                                    <option value="" disabled selected>Select a service...</option>
+                                    <option value="plumbing">Plumbing Fixes</option>
+                                    <option value="electrical">Electrical Work</option>
+                                    <option value="painting">Painting & Drywall</option>
+                                    <option value="carpentry">Carpentry</option>
+                                    <option value="doors-windows">Doors & Windows</option>
+                                    <option value="furniture">Furniture Assembly</option>
+                                    <option value="deck-fence">Deck & Fence</option>
+                                    <option value="general">General Maintenance</option>
+                                    <option value="other">Other / Not Sure</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="details" class="block text-navy-700 text-sm font-semibold mb-2">Brief Description</label>
+                                <textarea
+                                    id="details"
+                                    name="details"
+                                    rows="3"
+                                    placeholder="Tell us a bit about the problem (optional)..."
+                                    class="w-full px-4 py-3.5 rounded-xl border border-navy-200 bg-navy-50/50 text-navy-900 placeholder-navy-400 text-sm transition-all resize-none"
+                                ></textarea>
+                            </div>
+                        </div>
+
+                        <button
+                            type="submit"
+                            class="w-full mt-6 cta-gradient text-white font-bold text-lg py-4 rounded-xl hover:opacity-90 transition-all shadow-lg shadow-brand-500/25 flex items-center justify-center gap-2"
+                        >
+                            <span class="iconify" data-icon="lucide:send" data-width="20"></span>
+                            Send My Free Quote Request
+                        </button>
+
+                        <p class="text-navy-400 text-xs text-center mt-4">
+                            We respect your privacy. Your info is never shared or sold.
+                        </p>
+
+                        <!-- Success Message (hidden by default) -->
+                        <div id="form-success" class="hidden mt-6 bg-green-50 border border-green-200 rounded-xl p-5 text-center">
+                            <div class="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-3">
+                                <span class="iconify text-white" data-icon="lucide:check-circle" data-width="24"></span>
+                            </div>
+                            <div class="text-green-800 font-bold text-lg mb-1">Quote Request Sent!</div>
+                            <div class="text-green-600 text-sm">We'll call you back within 1 hour during business hours.</div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="bg-navy-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 py-12 md:py-16">
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
+                <!-- Col 1: Brand -->
+                <div class="sm:col-span-2 lg:col-span-1">
+                    <div class="flex items-center gap-2 mb-4">
+                        <div class="w-10 h-10 cta-gradient rounded-lg flex items-center justify-center">
+                            <span class="iconify text-white" data-icon="lucide:wrench" data-width="22"></span>
+                        </div>
+                        <span class="font-bold text-xl">ProFix</span>
+                    </div>
+                    <p class="text-navy-300 text-sm leading-relaxed mb-5">
+                        Professional handyman services for homeowners who value quality, honesty, and respect. Serving the Greater Austin area since 2012.
+                    </p>
+                    <div class="flex items-center gap-2 text-brand-400 font-bold text-lg">
+                        <span class="iconify" data-icon="lucide:phone-call" data-width="18"></span>
+                        (555) 847-2391
+                    </div>
+                </div>
+
+                <!-- Col 2: Services -->
+                <div>
+                    <h4 class="font-semibold text-sm uppercase tracking-wider text-navy-300 mb-5">Services</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="#services" class="text-navy-200 hover:text-white transition-colors">Plumbing Fixes</a></li>
+                        <li><a href="#services" class="text-navy-200 hover:text-white transition-colors">Electrical Work</a></li>
+                        <li><a href="#services" class="text-navy-200 hover:text-white transition-colors">Painting & Drywall</a></li>
+                        <li><a href="#services" class="text-navy-200 hover:text-white transition-colors">Carpentry</a></li>
+                        <li><a href="#services" class="text-navy-200 hover:text-white transition-colors">Doors & Windows</a></li>
+                        <li><a href="#services" class="text-navy-200 hover:text-white transition-colors">General Maintenance</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Service Areas -->
+                <div>
+                    <h4 class="font-semibold text-sm uppercase tracking-wider text-navy-300 mb-5">Service Areas</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li class="text-navy-200">Austin</li>
+                        <li class="text-navy-200">Round Rock</li>
+                        <li class="text-navy-200">Cedar Park</li>
+                        <li class="text-navy-200">Pflugerville</li>
+                        <li class="text-navy-200">Georgetown</li>
+                        <li class="text-navy-200">Leander</li>
+                    </ul>
+                </div>
+
+                <!-- Col 4: Quick Links -->
+                <div>
+                    <h4 class="font-semibold text-sm uppercase tracking-wider text-navy-300 mb-5">Quick Links</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="#why-us" class="text-navy-200 hover:text-white transition-colors">Why Choose Us</a></li>
+                        <li><a href="#how-it-works" class="text-navy-200 hover:text-white transition-colors">How It Works</a></li>
+                        <li><a href="#reviews" class="text-navy-200 hover:text-white transition-colors">Reviews</a></li>
+                        <li><a href="#contact" class="text-navy-200 hover:text-white transition-colors">Get a Free Quote</a></li>
+                        <li><a href="tel:5558472391" class="text-navy-200 hover:text-white transition-colors">Call Now</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Bottom bar -->
+            <div class="mt-12 pt-8 border-t border-navy-700 flex flex-col sm:flex-row justify-between items-center gap-4">
+                <p class="text-navy-400 text-sm">
+                    © 2024 ProFix Handyman Services. All rights reserved. Licensed & Insured. TX License #HC-48291
+                </p>
+                <div class="flex items-center gap-4">
+                    <span class="text-navy-400 text-xs">Trusted by:</span>
+                    <div class="flex items-center gap-3 text-navy-300">
+                        <span class="iconify" data-icon="simple-icons:google" data-width="20" title="Google Reviews"></span>
+                        <span class="iconify" data-icon="simple-icons:yelp" data-width="20" title="Yelp"></span>
+                        <span class="iconify" data-icon="simple-icons:nextdoor" data-width="20" title="Nextdoor"></span>
+                        <span class="iconify" data-icon="simple-icons:facebook" data-width="20" title="Facebook"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ========== FLOATING MOBILE CTA ========== -->
+    <div class="fixed bottom-0 left-0 right-0 lg:hidden z-50 p-3 bg-white/95 backdrop-blur-md border-t border-navy-100 shadow-[0_-4px_20px_rgba(0,0,0,0.08)]">
+        <a href="tel:5558472391" class="float-cta flex items-center justify-center gap-2.5 cta-gradient text-white font-bold text-base py-3.5 rounded-xl w-full">
+            <span class="iconify" data-icon="lucide:phone-call" data-width="20"></span>
+            Call Now — (555) 847-2391
+        </a>
+    </div>
+
+    <!-- ========== JAVASCRIPT ========== -->
+    <script>
+        // Mobile menu toggle
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        let menuOpen = false;
+
+        menuBtn.addEventListener('click', () => {
+            menuOpen = !menuOpen;
+            mobileMenu.classList.toggle('hidden');
+            menuBtn.innerHTML = menuOpen
+                ? '<span class="iconify" data-icon="lucide:x" data-width="24"></span>'
+                : '<span class="iconify" data-icon="lucide:menu" data-width="24"></span>';
+        });
+
+        // Close mobile menu on link click
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                menuOpen = false;
+                menuBtn.innerHTML = '<span class="iconify" data-icon="lucide:menu" data-width="24"></span>';
+            });
+        });
+
+        // Navbar scroll effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('nav-scrolled');
+            } else {
+                navbar.classList.remove('nav-scrolled');
+            }
+        });
+
+        // Form handling
+        const form = document.getElementById('quote-form');
+        const formSuccess = document.getElementById('form-success');
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            // Basic validation
+            const name = document.getElementById('name').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const service = document.getElementById('service').value;
+
+            if (!name || !phone || !service) return;
+
+            // Simulate form submission
+            const submitBtn = form.querySelector('button[type="submit"]');
+            const originalText = submitBtn.innerHTML;
+            submitBtn.innerHTML = '<span class="iconify animate-spin" data-icon="lucide:loader-2" data-width="20"></span> Sending...';
+            submitBtn.disabled = true;
+
+            setTimeout(() => {
+                // Hide form fields, show success
+                form.querySelectorAll('.space-y-5, button[type="submit"], h3, p:not(#form-success p)').forEach(el => {
+                    el.style.display = 'none';
+                });
+                formSuccess.classList.remove('hidden');
+
+                // In production, replace this with an actual form submission
+                // e.g., fetch('/api/quote', { method: 'POST', body: new FormData(form) })
+            }, 1500);
+        });
+
+        // Phone number formatting
+        const phoneInput = document.getElementById('phone');
+        phoneInput.addEventListener('input', (e) => {
+            let value = e.target.value.replace(/\D/g, '');
+            if (value.length > 10) value = value.slice(0, 10);
+            if (value.length >= 7) {
+                value = `(${value.slice(0,3)}) ${value.slice(3,6)}-${value.slice(6)}`;
+            } else if (value.length >= 4) {
+                value = `(${value.slice(0,3)}) ${value.slice(3)}`;
+            } else if (value.length >= 1) {
+                value = `(${value}`;
+            }
+            e.target.value = value;
+        });
+
+        // Smooth scroll for anchor links (fallback for older browsers)
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    e.preventDefault();
+                    const offset = 80;
+                    const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+                    window.scrollTo({ top, behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
